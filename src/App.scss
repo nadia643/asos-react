@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 // NAVBAR
 .navbar {
@@ -97,6 +98,11 @@ a:link {
 
 .drink-info {
   grid-column: 2 / 3;
+  
+  p {
+    font-family: 'Quicksand', sans-serif;
+  }
+
 }
 
 
@@ -138,7 +144,7 @@ a:link {
 .cocktail-card-details {
   padding: 1.3rem;
   color: #a4cd3c;
-
+  font-family: 'Quicksand', sans-serif;
 }
 
 img {
@@ -158,6 +164,7 @@ img {
     border-radius: 100px;
     transition: all .5s;
     position: relative;
+    font-family: 'Raleway', sans-serif;
   }
 
   &:hover {
@@ -177,14 +184,14 @@ img {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
   }
   &-nav {
-    background-color: #b3fcff;
+    background-color: #a4cd3c;
     color: black;
     padding: 25px 35px;
     display: flex;
   }
 
     &:after {
-      background-color: #7ff5fa;
+      background-color: #a4cd3c;
       color: black;
   }
   &-single {
@@ -226,6 +233,12 @@ img {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
+}
+
+// SEARCH
+
+.heading-search {
+  font-family: 'Raleway', sans-serif;
 }
 
 

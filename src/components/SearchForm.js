@@ -16,12 +16,13 @@ export default function SearchForm({ setSearchTerm }) {
   }
   return (
     <section className="section">
-      <h2 className="section-title">search cocktails</h2>
+      <h2 className="heading-search">Search cocktails</h2>
       <form className="form search-form" onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="name">search your favorite cocktail</label>
+          <label htmlFor="name"></label>
           <input
             type="text"
+            placeholder="Input cocktail name here"
             name="name"
             id="name"
             ref={searchValue}
