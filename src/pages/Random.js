@@ -85,9 +85,16 @@ export default function Random() {
   else {
     const { name, image, category, info, glass, instructions, ingredients, measurements }
     = cocktail;
+
+
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
     return (
     <section className="section cocktail-section">
       <Link to="/" className="btn btn-single btn-animated">Back home</Link>
+      <button className="btn btn-single btn-animated" onClick={refreshPage}>Give me another one</button>
       <div className="single-drink">
       <h2 className="heading heading-single-cocktail">{name}</h2>
         <img src={image} alt={name} className="single-cocktail-image"></img>
