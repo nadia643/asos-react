@@ -14,8 +14,9 @@ export default function CocktailList({ cocktails, loading }) {
 
   return (
     <div>
-      <h1>Cocktails</h1>
-      <div>
+      
+      <h1 className="heading heading-cocktail">Cocktails</h1>
+      <div className="cocktails-home">
         { cocktails.map(item => {
           return <Cocktail key={item.id} {...item} />
         })}

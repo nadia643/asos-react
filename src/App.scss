@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+// NAVBAR
+.navbar {
+  // background-color: lightgray;
+  height: 15vh;
+  width: 98vw;
+  margin: 0 auto;
+  margin-top: 1.5%;
+  display: inline-block;
+
+  background-image:
+      linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%),
+      linear-gradient(45deg, #444 25%, #fff 25%, #fff 75%, #444 75%);
+  
+    background-size: 45px 45px;
+
+    background-position:
+      0 0,
+      45/2 45/2
+
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 15px;
+  align-items: center;
+
+  &-content {
+    &--left{
+      // background-color:#ff9cea;
+      grid-column: 1 / span 1;
+      
+    }
+
+    &--right {
+      grid-column: 2 / span 1;
+
+      display: grid;
+      justify-self: flex-end;
+
+    }
+  }
+}
+
+
+.nav-image {
+  height: 8rem;
+  width: 8rem;
+  animation: moveInTop 2s;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+// SINGLE COCKTAIL PAGE
+
+.single-drink {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem;
+}
+
+.cocktail-section {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  justify-items: center;
+  margin: auto;
+  max-width: 85vw;
+}
+
+.single-cocktail-image {
+  grid-column: 1 / 2;
+  max-width: 100%;
+  height: 100%;
+
+  transition: all .8s;
+
+  &:hover {
+    transform: translateY(-1rem) scale(1.02);
+  }
+}
+
+.drink-info {
+  grid-column: 2 / 3;
+}
+
+
+// COCKTAIL LIST
+
+.heading {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+
+  &-single-cocktail {
+    text-align: center;
+  }
+}
+
+.cocktails-home {
+  width: 85vw;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370.8px, 1fr));
+
+  column-gap: 1.8rem;
+  row-gap: 1.8rem;
+}
+
+.cocktail {
+  display: grid;
+  grid-template-rows: auto 2fr;
+  box-shadow: 12px 10px 42px 0px rgba(0,0,0,0.32);
+  transition: transform .4s;
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+
+}
+
+.cocktail-card-details {
+  padding: 1.3rem;
+  color: #a4cd3c;
+
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+// BUTTON 
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 100px;
+    transition: all .5s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+
+    &::after {
+      transform: scaleX(1.5) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+  }
+  &-nav {
+    background-color: #b3fcff;
+    color: black;
+    padding: 25px 35px;
+    display: flex;
+  }
+
+    &:after {
+      background-color: #7ff5fa;
+      color: black;
+  }
+  &-single {
+    background-color: #ededed;
+    padding: 10px 15px;
+
+    &:after {
+      background-color: #ededed;
+    }
+    }
+  &-white {
+    background-color: #a4cd3c;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+
+    &:after {
+      background-color: #a4cd3c;
+      color: black;
+    }
+  }
+
+
+  &:after {
+    content:"";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    transition: all .8s;
+}
+
+&-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+}
+
+
+// ANIMATION
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

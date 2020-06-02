@@ -30,7 +30,12 @@ export default function SingleCocktail() {
             strIngredient2,
             strIngredient3,
             strIngredient4,
-            strIngredient5 
+            strIngredient5,
+            strMeasure1,
+            strMeasure2,
+            strMeasure3,
+            strMeasure4,
+            strMeasure5
           } = data.drinks[0];
 
             const ingredients = [
@@ -40,6 +45,13 @@ export default function SingleCocktail() {
               strIngredient4, 
               strIngredient5
             ];
+            const measurements = [
+              strMeasure1,
+              strMeasure2,
+              strMeasure3,
+              strMeasure4,
+              strMeasure5
+            ]
 
             const newCocktail = {
               name, 
@@ -48,7 +60,8 @@ export default function SingleCocktail() {
               category,
               glass,
               instructions,
-              ingredients
+              ingredients,
+              measurements
             };
             setCocktail(newCocktail);
         } else {
@@ -70,25 +83,32 @@ export default function SingleCocktail() {
     return <h2 className="section-title">No cocktail to display</h2>
   }
   else {
-    const { name, image, category, info, glass, instructions, ingredients }
+    const { name, image, category, info, glass, instructions, ingredients, measurements }
     = cocktail;
     return (
     <section className="section cocktail-section">
-      <Link to="/" className="btn btn-primary">Back home</Link>
-      <h2 className="section-title">{name}</h2>
-      <div className="drink">
-        <img src={image} alt={name}></img>
+      <Link to="/" className="btn btn-single btn-animated">Back home</Link>
+      <div className="single-drink">
+      <h2 className="heading heading-single-cocktail">{name}</h2>
+        <img src={image} alt={name} className="single-cocktail-image"></img>
         <div className="drink-info">
-          <p>name: {name}</p>
-          <p>category: {category}</p>
-          <p>info: {info}</p>
-          <p>glass: {glass}</p>
-          <p>instructions: {instructions}</p>
+          <p>Name: {name}</p>
+          <p>Category: {category}</p>
+          <p>Info: {info}</p>
+          <p>Glass: {glass}</p>
+          <p>Instructions: {instructions}</p>
           <p>
-            ingredients :{" "}
+            Ingredients: { " " }
               {ingredients.map((item, index) => {
-                return item ? <span key={index}>{item}</span> : null;
+                return item ? <span key={index}> {item},  </span> : null;
               })}
+          </p>
+          <p> 
+            Measurements: { " " }
+              {measurements.map((item, index) => {
+                return item ? <span key={index}> {item}, </span> : null;
+              })}
+
           </p>
         </div>
       </div>
