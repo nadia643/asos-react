@@ -112,7 +112,7 @@ export default function Random() {
     <section className="section cocktail-section">
       <div className="random-buttons">
         <Link to="/" className="btn btn-single btn-animated">Back home</Link>
-        <button className="btn btn-single btn-animated" onClick={refreshPage}>Give me another one</button>
+        <button className="btn btn-single btn-animated" onClick={}>Give me another one</button>
       </div>
       <div className="single-drink">
         
