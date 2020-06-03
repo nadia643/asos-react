@@ -6,8 +6,10 @@ export default function SingleCocktail() {
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
 
+  // this.toggleLanguage = this.toggleLanguage.bind(this);
 
   
+
   useEffect(() => {
     setLoading(true);
     async function getCocktail() {
@@ -31,11 +33,13 @@ export default function SingleCocktail() {
             strIngredient3,
             strIngredient4,
             strIngredient5,
+            strIngredient6,
             strMeasure1,
             strMeasure2,
             strMeasure3,
             strMeasure4,
-            strMeasure5
+            strMeasure5,
+            strMeasure6
           } = data.drinks[0];
 
             const ingredients = [
@@ -43,14 +47,16 @@ export default function SingleCocktail() {
               strIngredient2, 
               strIngredient3, 
               strIngredient4, 
-              strIngredient5
+              strIngredient5,
+              strIngredient6
             ];
             const measurements = [
               strMeasure1,
               strMeasure2,
               strMeasure3,
               strMeasure4,
-              strMeasure5
+              strMeasure5,
+              strMeasure6
             ]
 
             const newCocktail = {
@@ -74,7 +80,9 @@ export default function SingleCocktail() {
       setLoading(false)
     }
     getCocktail();
+    
   }, [id]);
+
 
   if(loading) {
     return <h2 className="section-title">Loading...</h2>
@@ -85,6 +93,15 @@ export default function SingleCocktail() {
   else {
     const { name, image, category, info, glass, instructions, ingredients, measurements }
     = cocktail;
+
+    let imageOne = `https://www.thecocktaildb.com/images/ingredients/${ingredients[0]}.png`;
+    let imageTwo = `https://www.thecocktaildb.com/images/ingredients/${ingredients[1]}.png`;
+    let imageThree = `https://www.thecocktaildb.com/images/ingredients/${ingredients[2]}.png`;
+    let imageFour = `https://www.thecocktaildb.com/images/ingredients/${ingredients[3]}.png`;
+    let imageFive = `https://www.thecocktaildb.com/images/ingredients/${ingredients[4]}.png`;
+    let imageSix = `https://www.thecocktaildb.com/images/ingredients/${ingredients[5]}.png`;
+
+
     return (
     <section className="section cocktail-section">
       <Link to="/" className="btn btn-single btn-animated">Back home</Link>
@@ -97,12 +114,33 @@ export default function SingleCocktail() {
           <p>Info: {info}</p>
           <p>Glass: {glass}</p>
           <p>Instructions: {instructions}</p>
-          <p>{measurements[0]} {ingredients[0]}<br /> 
-          {measurements[1]} {ingredients[1]}<br />
-          {measurements[2]} {ingredients[2]}<br />
-          {measurements[3]} {ingredients[3]}<br />
-          {measurements[4]} {ingredients[4]}<br />
-          </p>
+
+          <div className="ingredient-image-container">
+            <div className="ingredient-image-one">
+              <img src={imageOne} alt=""/>
+              {measurements[0]} {ingredients[0]}
+            </div> 
+            <div className="ingredient-image-two">
+              <img src={imageTwo} alt=""/>
+              {measurements[1]} {ingredients[1]}
+            </div> 
+            <div className="ingredient-image-three">
+              <img src={imageThree} alt=""/>
+              {measurements[2]} {ingredients[2]}
+            </div> 
+            <div className="ingredient-image-four">
+              <img src={imageFour} alt=""/>
+              {measurements[3]} {ingredients[3]}
+            </div> 
+            <div className="ingredient-image-five">
+              <img src={imageFive} alt=""/>
+              {measurements[4]} {ingredients[4]}
+            </div> 
+            <div className="ingredient-image-six">
+              <img src={imageSix} alt=""/>
+              {measurements[5]} {ingredients[5]}
+            </div> 
+          </div>
           {/* <p>
             Ingredients: { " " }
               {ingredients.map((item, index) => {

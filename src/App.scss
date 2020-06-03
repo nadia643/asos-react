@@ -252,6 +252,53 @@ img {
 }
 
 
+// INGREDIENTS
+
+.ingredient-info {
+  grid-row: 2 / 3;
+  
+}
+
+.ingredient-image {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  align-items: center;
+  justify-items: center; 
+
+  &-one {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; 
+    
+    }
+    &-two {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+    &-three {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+    &-four {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+    &-five {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    &-six {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+
 // ANIMATION
 
 @keyframes moveInBottom {
@@ -273,3 +320,4 @@ img {
     transform: translateY(0);
   }
 }
+
