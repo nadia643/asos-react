@@ -101,6 +101,13 @@ export default function SingleCocktail() {
     let imageFive = `https://www.thecocktaildb.com/images/ingredients/${ingredients[4]}.png`;
     let imageSix = `https://www.thecocktaildb.com/images/ingredients/${ingredients[5]}.png`;
 
+    let imageOneLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[0]}.png`;
+    let imageTwoLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[1]}.png`;
+    let imageThreeLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[2]}.png`;
+    let imageFourLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[3]}.png`;
+    let imageFiveLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[4]}.png`;
+    let imageSixLarge = `https://www.thecocktaildb.com/images/ingredients/${ingredients[5]}.png`;
+
 
     return (
     <section className="section cocktail-section">
@@ -116,28 +123,40 @@ export default function SingleCocktail() {
           <p>Instructions: {instructions}</p>
 
           <div className="ingredient-image-container">
-            <div className="ingredient-image-one">
-              <img src={imageOne} alt=""/>
+            <div className="ingredient-image ingredient-image-one">
+              <a href={imageOneLarge} target="blank"> 
+                <img src={imageOne} alt=""/> 
+              </a>
               {measurements[0]} {ingredients[0]}
             </div> 
-            <div className="ingredient-image-two">
-              <img src={imageTwo} alt=""/>
+            <div className="ingredient-image ingredient-image-two">
+              <a href={imageTwoLarge} target="blank"> 
+                <img src={imageTwo} alt=""/>
+              </a>
               {measurements[1]} {ingredients[1]}
             </div> 
-            <div className="ingredient-image-three">
-              <img src={imageThree} alt=""/>
+            <div className="ingredient-image ingredient-image-three">
+              <a href={imageThreeLarge} target="blank">
+                <img src={imageThree} alt=""/>
+              </a>
               {measurements[2]} {ingredients[2]}
             </div> 
-            <div className="ingredient-image-four">
-              <img src={imageFour} alt=""/>
+            <div className="ingredient-image ingredient-image-four">
+              <a href={imageFourLarge} target="blank">
+                <img src={imageFour} alt=""/>
+              </a>
               {measurements[3]} {ingredients[3]}
             </div> 
-            <div className="ingredient-image-five">
-              <img src={imageFive} alt=""/>
+            <div className="ingredient-image ingredient-image-five">
+              <a href={imageFiveLarge} target="blank">
+                <img src={imageFive} alt=""/>
+                </a>
               {measurements[4]} {ingredients[4]}
             </div> 
-            <div className="ingredient-image-six">
-              <img src={imageSix} alt=""/>
+            <div className="ingredient-image ingredient-image-six">
+              <a href={imageSixLarge} target="blank">
+                <img src={imageSix} alt=""/>
+              </a>
               {measurements[5]} {ingredients[5]}
             </div> 
           </div>
