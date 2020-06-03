@@ -22,7 +22,7 @@ export default function SearchFormIngredient({ setSearchTerm }) {
           <label htmlFor="name"></label>
           <input
             type="text"
-            placeholder="Input cocktail name here"
+            placeholder="Input ingredient name here"
             name="name"
             id="name"
             ref={searchValue}

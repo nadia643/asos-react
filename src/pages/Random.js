@@ -93,8 +93,10 @@ export default function Random() {
 
     return (
     <section className="section cocktail-section">
-      <Link to="/" className="btn btn-single btn-animated">Back home</Link>
-      <button className="btn btn-single btn-animated" onClick={refreshPage}>Give me another one</button>
+      <div className="random-buttons">
+        <Link to="/" className="btn btn-single btn-animated">Back home</Link>
+        <button className="btn btn-single btn-animated" onClick={refreshPage}>Give me another one</button>
+      </div>
       <div className="single-drink">
       <h2 className="heading heading-single-cocktail">{name}</h2>
         <img src={image} alt={name} className="single-cocktail-image"></img>
@@ -104,7 +106,13 @@ export default function Random() {
           <p>Info: {info}</p>
           <p>Glass: {glass}</p>
           <p>Instructions: {instructions}</p>
-          <p>
+          <p>{measurements[0]} {ingredients[0]}<br /> 
+          {measurements[1]} {ingredients[1]}<br />
+          {measurements[2]} {ingredients[2]}<br />
+          {measurements[3]} {ingredients[3]}<br />
+          {measurements[4]} {ingredients[4]}<br />
+          </p>
+          {/* <p>
             Ingredients: { " " }
               {ingredients.map((item, index) => {
                 return item ? <span key={index}> {item},  </span> : null;
@@ -115,8 +123,8 @@ export default function Random() {
               {measurements.map((item, index) => {
                 return item ? <span key={index}> {item}, </span> : null;
               })}
-
-          </p>
+          </p> */}
+          
         </div>
       </div>
     </section>

@@ -97,7 +97,13 @@ export default function SingleCocktail() {
           <p>Info: {info}</p>
           <p>Glass: {glass}</p>
           <p>Instructions: {instructions}</p>
-          <p>
+          <p>{measurements[0]} {ingredients[0]}<br /> 
+          {measurements[1]} {ingredients[1]}<br />
+          {measurements[2]} {ingredients[2]}<br />
+          {measurements[3]} {ingredients[3]}<br />
+          {measurements[4]} {ingredients[4]}<br />
+          </p>
+          {/* <p>
             Ingredients: { " " }
               {ingredients.map((item, index) => {
                 return item ? <span key={index}> {item},  </span> : null;
@@ -108,8 +114,7 @@ export default function SingleCocktail() {
               {measurements.map((item, index) => {
                 return item ? <span key={index}> {item}, </span> : null;
               })}
-
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

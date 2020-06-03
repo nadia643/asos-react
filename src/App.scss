@@ -236,10 +236,19 @@ img {
 }
 }
 
+
+
 // SEARCH
 
 .heading-search {
   font-family: 'Raleway', sans-serif;
+}
+
+// RANDOM PAGE
+.random-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 

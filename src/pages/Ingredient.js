@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CocktailList from '../components/CocktailList';
-import SearchForm from '../components/SearchForm';
+import CocktailListIngredient from '../components/CocktailListIngredient';
+import SearchFormIngredient from '../components/SearchFormIngredient';
 
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
           }
         }
         catch(error) {
-          console.log(error);
+          console.log("you have erred, but it still seems to work so check this later");
         }
         setLoading(false);
       }
@@ -50,8 +50,8 @@ export default function Home() {
 
   return (
     <main>
-      <SearchForm setSearchTerm={setSearchTerm} />  
-      <CocktailList loading={loading} cocktails={cocktails} />
+      <SearchFormIngredient setSearchTerm={setSearchTerm} />  
+      <CocktailListIngredient loading={loading} cocktails={cocktails} />
       
     </main>
   )

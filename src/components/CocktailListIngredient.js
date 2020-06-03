@@ -7,14 +7,14 @@ export default function CocktailList({ cocktails, loading }) {
     return <h2>Loading...</h2>
   }
   if(cocktails.length < 1) {
-    return <h2>No cocktails matched your search criteria.</h2>
+    return <h2>Start typing some ingredients above!</h2>
   }
   
   
 
   return (
     <div>   
-      <h1 className="heading heading-cocktail">Ingredients</h1>
+      <h1 className="heading heading-cocktail">Cocktails</h1>
       <div className="cocktails-home">
         { cocktails.map(item => {
           return <Cocktail key={item.id} {...item} />
