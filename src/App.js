@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
+import Ingredient from './pages/Ingredient';
 import Random from './pages/Random';
 import SingleCocktail from './pages/SingleCocktail';
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/random">
             <Random />
+          </Route>
+          <Route path="/ingredient">
+            <Ingredient />
           </Route>
         </Switch>
       </Router>
