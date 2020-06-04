@@ -1,0 +1,39 @@
+// MIXINS
+
+
+@mixin respond-phone-360 {
+  @media(max-width: 360px) {
+    @content;
+  }
+}
+
+
+@mixin respond-phone-480 {
+  @media(max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin respond-phone {
+  @media(max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-portrait-750{
+  @media(max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-portrait {
+  @media(max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-landscape {
+  @media(max-width: 1200px) {
+     @content;
+  }
+}
