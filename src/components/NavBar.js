@@ -13,9 +13,6 @@ export default function Navbar() {
               <Link to="/" className="btn btn-nav btn-animated">Home</Link>
             </li>
             <li>
-              <Link to="/" className="btn btn-nav btn-animated">About</Link>
-            </li>
-            <li>
               <Link to="/random" className="btn btn-nav btn-animated">Randomizer</Link>
             </li>
             <li>

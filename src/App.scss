@@ -4,7 +4,7 @@
 // NAVBAR
 .navbar {
   // background-color: lightgray;
-  height: 18vh;
+  height: 22vh;
   width: 98vw;
   margin: 0 auto;
   margin-top: 1.5%;
@@ -21,7 +21,6 @@
       45/2 45/2;
 
       @include respond-phone {
-        height: 22vh;
         width: 98vw;
         overflow: hidden;
       }
@@ -52,9 +51,7 @@
       @include respond-phone {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-      }
-      
-
+      } 
     }
   }
 }
@@ -81,19 +78,11 @@
   align-items: center;
   margin-right: 40px;
 
-  @include respond-phone {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-  }
-
-
-    // @include respond-tablet-portrait {
-    //   display: grid;
-    //   grid-template-rows: 1fr 1fr;
-    //   grid-template-columns: 1fr 1fr;
-    //   margin: 0px;
-    // }
+    @include respond-phone {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+    }
 }
 
 
@@ -142,11 +131,6 @@ a:link {
     max-height: 60%;
     max-width: 95%;
   }
-
-  // @include respond-phone-360 {
-  //   max-height: 20%;
-  //   max-width: 60%;
-  // }
 
 
   &:hover {
@@ -222,10 +206,6 @@ a:link {
   box-shadow: 12px 10px 42px 0px rgba(0,0,0,0.32);
   transition: transform .4s;
 
-  // &:hover {
-  //   transform: translateY(-1.5rem) scale(1.03);
-  // }
-
 }
 
 .cocktail-card-details {
@@ -282,11 +262,11 @@ img {
       font-size: 1rem;
     } 
     @include respond-tablet-portrait-750 {
-      padding: 10px 10px;
-      font-size: .7rem;
+      padding: 15px 15px;
+      font-size: .8rem;
     }
     @include respond-phone {
-      padding: 8px 2px;
+      padding: 10px 10px;
       font-size: .5rem;
     }
 
