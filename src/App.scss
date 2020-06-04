@@ -20,6 +20,12 @@
       0 0,
       45/2 45/2;
 
+      @include respond-phone {
+        height: 22vh;
+        width: 98vw;
+        overflow: hidden;
+      }
+
 }
 
 .nav {
@@ -40,7 +46,7 @@
     &--right {
       grid-column: 2 / span 1;
 
-      display: grid;
+      // display: grid;
       justify-self: flex-end;
 
       @include respond-phone {
@@ -74,6 +80,13 @@
   display: flex;
   align-items: center;
   margin-right: 40px;
+
+  @include respond-phone {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+
 
     // @include respond-tablet-portrait {
     //   display: grid;
@@ -130,10 +143,10 @@ a:link {
     max-width: 95%;
   }
 
-  @include respond-phone-360 {
-    max-height: 20%;
-    max-width: 50%;
-  }
+  // @include respond-phone-360 {
+  //   max-height: 20%;
+  //   max-width: 60%;
+  // }
 
 
   &:hover {
@@ -272,6 +285,10 @@ img {
       padding: 10px 10px;
       font-size: .7rem;
     }
+    @include respond-phone {
+      padding: 8px 2px;
+      font-size: .5rem;
+    }
 
 
   }
@@ -285,6 +302,17 @@ img {
   &-single {
     background-color: #ededed;
     padding: 10px 15px;
+    font-size: 1.2rem;
+
+    @include respond-phone {
+      font-size: .8rem;
+      padding: 8px 10px;
+    }
+    @include respond-phone-480 {
+      display: flex;
+      align-items: center;
+    }
+
 
     &:after {
       background-color: #ededed;
@@ -403,6 +431,10 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 1.5rem;
+
+    @include respond-phone-480 {
+      font-size: smaller;
+    }
   }
 }
 
