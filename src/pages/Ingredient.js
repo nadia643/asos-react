@@ -3,7 +3,7 @@ import CocktailListIngredient from '../components/CocktailListIngredient';
 import SearchFormIngredient from '../components/SearchFormIngredient';
 
 
-export default function Home() {
+export default function Ingredient() {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("a");
   const [cocktails, setCocktails] = useState([]);

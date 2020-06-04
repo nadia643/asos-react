@@ -138,9 +138,9 @@ a:link {
   box-shadow: 12px 10px 42px 0px rgba(0,0,0,0.32);
   transition: transform .4s;
 
-  &:hover {
-    transform: translateY(-1.5rem) scale(1.03);
-  }
+  // &:hover {
+  //   transform: translateY(-1.5rem) scale(1.03);
+  // }
 
 }
 
@@ -154,6 +154,7 @@ img {
   width: 100%;
   display: block;
 }
+
 
 
 // BUTTON 
@@ -339,4 +340,11 @@ img {
     transform: translateY(0);
   }
 }
+
+
+
+
+
+
+
 

@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default function Cocktail({ image, name, id, info, glass, measurements }) {
+export default function Cocktail({ image, name, id, info, glass }) {
 
   return (
     <article className="cocktail"> 
       <div className="img-container">
-        <img className="cocktail-img" src={image} alt={name} />
+        <img className="img-container-img" src={image} alt={name} />
       </div>
       <div className="cocktail-card-details">
         <h3>{ name }</h3>
