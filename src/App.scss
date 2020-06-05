@@ -3,7 +3,6 @@
 @import './mixins';
 // NAVBAR
 .navbar {
-  // background-color: lightgray;
   height: 22vh;
   width: 98vw;
   margin: 0 auto;
@@ -256,6 +255,7 @@ img {
     color: black;
     padding: 25px 35px;
     display: flex;
+    max-height: 40px;
 
     @include respond-tablet-portrait {
       padding: 25px 17px;
