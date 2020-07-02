@@ -332,6 +332,13 @@ img {
 }
 }
 
+.btn-booking {
+  background-color: #a4cd3c;
+  color: black;
+  padding: 10px 35px;
+  display: flex;
+  max-height: 40px;
+}
 
 // SEARCH
 
@@ -441,4 +448,55 @@ img {
   }
 }
 
+
+
+
+// FORM
+
+.form-group {
+  margin-top: 2rem;
+  
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+}
+
+.booking {
+  transition: 1s;
+  width: 20%;
+  height: 30%;
+  border-radius: 5%;
+  padding: 0.3rem 0.3rem;
+  border: none;
+
+  &:focus:invalid {
+    border-bottom: 3px solid red;
+    background-color: rgb(241, 178, 178)
+  }
+
+  &:focus:valid {
+    border-bottom: 3px solid rgb(95, 214, 95);
+    background-color: rgb(191, 253, 191);
+  }
+
+  &:hover{
+    background-color: lightgray;
+  }
+}
+
+.booking-form {
+  background-image: linear-gradient(105deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 50%, transparent 50%),url(./images/booking-pic.jpg);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: 60vh;
+  margin-top: 3rem;
+  margin-left: 25%;
+}
+
+.heading-booking {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+}
 

@@ -18,6 +18,9 @@ export default function Navbar() {
             <li>
               <Link to="/ingredient" className="btn btn-nav btn-animated">Ingredient</Link>
             </li>
+            <li>
+              <Link to="/bookings" className="btn btn-nav btn-animated">Bookings</Link>
+            </li>
           </ul>
       </div>
     </div>
