@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 
 export default class Bookings extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+     event.preventDefault()
+      alert("We have received your request and will get back to you in 3 - 5 working days")   
+  }
+
   render() {
     return (
       <div className="booking-form">
@@ -15,8 +25,9 @@ export default class Bookings extends Component {
               <input id="booking-email" className="booking" name="password" type="email" placeholder="Email" required></input>
             </div>
 
-            <button type="submit" className="btn btn-booking btn-animated">Submit</button>
+            <button type="button" className="btn btn-booking btn-animated" onClick={this.handleSubmit}>Submit</button>
           </form>
+
         </div>
     )
   }
